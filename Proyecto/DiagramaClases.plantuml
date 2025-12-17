@@ -1,0 +1,102 @@
+@startuml ProyectoConstruccion
+
+    class Usuario {
+        -id: string
+        -document: string
+        -name: string
+        -mail: string
+        -phone: string
+        -address: string
+        -password: string
+
+        +getters(All):void
+        +setters(All):void
+        +IniciarSesion(string, string):void
+        +CerrarSesion():void
+        +CrearProyecto(string, string, string, string, string, string):void
+        +EditarPerfil(string, string, string, string, string):void
+        +ModificarProyecto(string, string, string, string, string):void
+        +EliminarProyecto(string):void
+        +CrearPresupuesto(string, string, string, string, string):void
+        +ModificarPresupuesto(string, string, string, string, string):void
+        +EliminarPresupuesto(string):void
+        +CrearTarea(string, string, string, string, string):void
+        +ModificarTarea(string, string, string, string, string):void
+        +EliminarTarea(string):void
+        +CrearBodega(string, string, string, string):void
+        +ModificarBodega(string, string, string, string):void
+        +EliminarBodega(string):void
+        +CrearMaterial(string, string, string, string, string):void:void
+        +ModificarMaterial(string, string, string, string, string):void
+        +EliminarMaterial(string):void
+        +AgregarPersonal(string, string, string, string, string):void
+        +ModificarPersonal(string, string, string, string, string):void
+        +EliminarPersonal(string):void
+    }
+    
+    class Proyecto {
+        -id: string
+        -name: string
+        -location: string
+        -startDate: string
+        -endDate: string
+        -status: string
+
+        +getters(All):void
+        +setters(All):void
+    }
+
+    class Presupuesto {
+        -id: string
+        -projectId: string
+        -amount: string
+        -date: string
+        -description: string
+
+        +getters(All):void
+        +setters(All):void
+    }
+
+    class Tarea {
+        -id: string
+        -projectId: string
+        -name: string
+        -description: string
+        -status: string
+
+        +getters(All):void
+        +setters(All):void
+    }
+
+    class Bodega {
+        -id: string
+        -location: string
+        -capacity: string
+        -manager: string
+
+        +getters(All):void
+        +setters(All):void
+    }
+
+    class Material {
+        -id: string
+        -bodegaId: string
+        -name: string
+        -quantity: string
+        -description: string
+
+        +getters(All):void
+        +setters(All):void
+    }
+
+    class Personal {
+        -id: string
+        -projectId: string
+        -name: string
+        -role: string
+        -contactInfo: string
+
+        +getters(All):void
+        +setters(All):void
+    }
+@enduml
