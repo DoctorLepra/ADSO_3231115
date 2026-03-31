@@ -1,0 +1,18 @@
+@startuml claseCuentaBancaria
+
+    class CuentaBancaria {
+        -identificacion: string
+        -nombre: string
+        -nrocuenta: string
+        -tipocuenta: string
+        -saldo: int
+
+        +getters(All):void
+        +setters(All):void
+        +descripcion(string):void
+        +ingreso(int):void
+        +retiro(int):void
+
+    }
+    
+@enduml
